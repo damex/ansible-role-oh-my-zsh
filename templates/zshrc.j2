@@ -1,0 +1,7 @@
+# {{ ansible_managed }}
+export ZSH={{ oh_my_zsh_directory }}
+ZSH_THEME="{{ oh_my_zsh_theme }}"
+DISABLE_AUTO_UPDATE="true"
+HIST_STAMPS="dd.mm.yyyy"
+plugins=({{ oh_my_zsh_plugins }})
+source $ZSH/oh-my-zsh.sh

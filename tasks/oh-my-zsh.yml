@@ -1,0 +1,18 @@
+---
+- name: ensure oh-my-zsh is installed and configured
+  block:
+
+  - name: ensure oh-my-zsh repository is cloned
+    git:
+      repo: "{{ oh_my_zsh_repository }}"
+      dest: "{{ oh_my_zsh_directory }}"
+
+  - name: ensure global zsh configuration is correct
+    template:
+      src: "{{ item.src }}"
+      dest: "{{ item.dest }}"
+    with_items:
+      - { src: "zshrc.j2", dest: "/etc/zsh/zshrc" }
+      - { src: "zshenv.j2", dest: "/etc/zsh/zshenv" }
+
+  become: true
