@@ -1,0 +1,5 @@
+---
+oh_my_zsh_repository: "https://github.com/robbyrussell/oh-my-zsh"
+oh_my_zsh_directory: "/etc/zsh/oh-my-zsh"
+oh_my_zsh_theme: "agnoster"
+oh_my_zsh_plugins: "colored-man-pages colorize git screen sudo"
