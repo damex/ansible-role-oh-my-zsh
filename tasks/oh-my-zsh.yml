@@ -2,6 +2,10 @@
 - name: ensure oh-my-zsh is installed and configured
   block:
 
+  - file:
+      path: "/etc/zsh"
+      state: "directory"
+
   - name: ensure oh-my-zsh repository is cloned
     git:
       repo: "{{ oh_my_zsh_repository }}"
@@ -14,5 +18,15 @@
     with_items:
       - { src: "zshrc.j2", dest: "/etc/zsh/zshrc" }
       - { src: "zshenv.j2", dest: "/etc/zsh/zshenv" }
+
+  - file:
+      src: "{{ item.src }}"
+      dest: "{{ item.dest }}"
+      force: true
+      state: "link"
+    with_items:
+      - { src: "/etc/zsh/zshenv", dest: "/etc/zshenv" }
+      - { src: "/etc/zsh/zshrc", dest: "/etc/zshrc" }
+    when: ansible_distribution == 'CentOS'
 
   become: true

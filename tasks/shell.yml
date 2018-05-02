@@ -7,3 +7,4 @@
     - "{{ ansible_env.USER }}"
     - "root"
   become: true
+  ignore_errors: true
