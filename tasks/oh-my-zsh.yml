@@ -10,6 +10,13 @@
     git:
       repo: "{{ oh_my_zsh_repository }}"
       dest: "{{ oh_my_zsh_directory }}"
+      update: false
+
+  - name: ensure oh-my-zsh repository is up to date
+    git:
+      repo: "{{ oh_my_zsh_repository }}"
+      dest: "{{ oh_my_zsh_directory }}"
+      clone: false
 
   - name: ensure global zsh configuration is correct
     template:
