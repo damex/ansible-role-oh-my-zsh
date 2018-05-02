@@ -10,3 +10,14 @@
     - git
     - zsh
   become: true
+  when: ansible_distribution == 'Debian'
+
+- name: ensure git and zfs packages are installed
+  yum:
+    name: "{{ item }}"
+    state: "present"
+  with_items:
+    - git
+    - zsh
+  become: true
+  when: ansible_distribution == 'CentOS'
