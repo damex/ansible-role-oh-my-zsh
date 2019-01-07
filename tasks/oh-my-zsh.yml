@@ -22,9 +22,11 @@
     template:
       src: "{{ item.src }}"
       dest: "{{ item.dest }}"
-    with_items:
+    loop:
       - { src: "zshrc.j2", dest: "/etc/zsh/zshrc" }
       - { src: "zshenv.j2", dest: "/etc/zsh/zshenv" }
+      - { src: "zlogin.j2", dest: "/etc/zsh/zlogin" }
+      - { src: "zlogout.j2", dest: "/etc/zsh/zlogout" }
 
   - file:
       src: "{{ item.src }}"

@@ -1,5 +1,9 @@
 ---
 - include_role:
     name: package
+  vars:
+    packages:
+      - git
+      - zsh
 - import_tasks: oh-my-zsh.yml
 - import_tasks: shell.yml
