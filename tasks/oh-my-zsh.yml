@@ -27,6 +27,7 @@
       - { src: "zshenv.j2", dest: "/etc/zsh/zshenv" }
       - { src: "zlogin.j2", dest: "/etc/zsh/zlogin" }
       - { src: "zlogout.j2", dest: "/etc/zsh/zlogout" }
+      - { src: "zprofile.j2", dest: "/etc/zsh/zprofile" }
 
   - file:
       src: "{{ item.src }}"
