@@ -1,14 +1,14 @@
 ---
 - name: ensure zsh configuration
   block:
-    - name: ensure zshrc
-      template:
-        src: "zshenv.j2"
-        dest: "{{ oh_my_zsh_zshrc_configuration_file }}"
     - name: ensure zshenv
       template:
         src: "zshenv.j2"
         dest: "{{ oh_my_zsh_zshenv_configuration_file }}"
+    - name: ensure zshrc
+      template:
+        src: "zshrc.j2"
+        dest: "{{ oh_my_zsh_zshrc_configuration_file }}"
     - name: ensure zlogin
       template:
         src: "zlogin.j2"
