@@ -1,5 +1,5 @@
 ---
-- name: ensure oh my zsh
+- name: ensure oh-my-zsh
   block:
     - import_tasks: environment.yml
     - include_role:
@@ -10,7 +10,7 @@
           - zsh
     - import_tasks: directories.yml
     - import_tasks: configuration.yml
-    - import_tasks: oh_my_zsh.yml
+    - import_tasks: oh-my-zsh.yml
     - import_tasks: shell.yml
   tags:
-    - oh_my_zsh
+    - oh-my-zsh
