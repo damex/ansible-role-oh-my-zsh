@@ -1,6 +1,5 @@
 ---
 galaxy_info:
-  role_name: oh-my-zsh
   author: Roman Kuzmitskii
   description: oh-my-zsh role
   license: GPLv2
