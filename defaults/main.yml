@@ -10,3 +10,6 @@ oh_my_zsh_zlogout_configuration_file: "{{ oh_my_zsh_zsh_directory }}/zlogout"
 oh_my_zsh_zprofile_configuration_file: "{{ oh_my_zsh_zsh_directory }}/zprofile"
 oh_my_zsh_theme: "agnoster"
 oh_my_zsh_plugins: "colored-man-pages colorize git screen sudo"
+oh_my_zsh_packages:
+  - "git"
+  - "zsh"

@@ -1,0 +1,5 @@
+---
+- include_role:
+    name: "damex.package"
+  vars:
+    package_packages: "{{ oh_my_zsh_packages }}"
