@@ -1,0 +1,10 @@
+---
+- name: ensure packages
+  include_role:
+    name: "damex.package"
+  vars:
+    package_packages:
+      - name: "{{ oh_my_zsh_git_package_name }}"
+        state: "{{ oh_my_zsh_git_package_state }}"
+      - name: "{{ oh_my_zsh_zsh_package_name }}"
+        state: "{{ oh_my_zsh_zsh_package_state }}"
