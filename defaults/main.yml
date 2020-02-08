@@ -1,5 +1,9 @@
 ---
 oh_my_zsh_repository: "https://github.com/robbyrussell/oh-my-zsh"
+oh_my_zsh_git_package_name: "git"
+oh_my_zsh_git_package_state: "present"
+oh_my_zsh_zsh_package_name: "zsh"
+oh_my_zsh_zsh_package_state: "present"
 oh_my_zsh_zsh_shell: "/bin/zsh"
 oh_my_zsh_zsh_directory: "/etc/zsh"
 oh_my_zsh_directory: "{{ oh_my_zsh_zsh_directory }}/oh-my-zsh"
