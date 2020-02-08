@@ -1,0 +1,41 @@
+---
+- name: ensure zsh configuration
+  block:
+    - name: ensure zshrc
+      template:
+        src: "zshenv.j2"
+        dest: "{{ oh_my_zsh_zshrc_configuration_file }}"
+    - name: ensure zshenv
+      template:
+        src: "zshenv.j2"
+        dest: "{{ oh_my_zsh_zshenv_configuration_file }}"
+    - name: ensure zlogin
+      template:
+        src: "zlogin.j2"
+        dest: "{{ oh_my_zsh_zlogin_configuration_file }}"
+    - name: ensure zlogout
+      template:
+        src: "zlogout.j2"
+        dest: "{{ oh_my_zsh_zlogout_configuration_file }}"
+    - name: ensure zprofile
+      template:
+        src: "zprofile.j2"
+        dest: "{{ oh_my_zsh_zprofile_configuration_file }}"
+  become: true
+
+- name: ensure centos specific zsh configuration
+  block:
+    - name: ensure zshenv symlink
+      file:
+        src: "{{ oh_my_zsh_zshenv_configuration_file }}"
+        dest: "/etc/zshenv"
+        force: true
+        state: "link"
+    - name: ensure zshrc symlink
+      file:
+        src: "{{ oh_my_zsh_zshrc_configuration_file }}"
+        dest: "/etc/zshrc"
+        force: true
+        state: "link"
+  become: true
+  when: ansible_distribution == 'CentOS'

@@ -1,9 +1,15 @@
 ---
-- include_role:
-    name: package
-  vars:
-    packages:
-      - git
-      - zsh
-- import_tasks: oh-my-zsh.yml
-- import_tasks: shell.yml
+- name: ensure oh-my-zsh
+  block:
+    - include_role:
+        name: "package"
+      vars:
+        packages:
+          - git
+          - zsh
+    - import_tasks: directories.yml
+    - import_tasks: configuration.yml
+    - import_tasks: oh-my-zsh.yml
+    - import_tasks: shell.yml
+  tags:
+    - oh-my-zsh

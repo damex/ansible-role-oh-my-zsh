@@ -2,8 +2,8 @@
 - name: ensure current user and root is using zsh shell
   user:
     name: "{{ item }}"
-    shell: "/bin/zsh"
-  with_items:
+    shell: "{{ oh_my_zsh_zsh_shell }}"
+  loop:
     - "{{ ansible_env.USER }}"
     - "root"
   become: true
