@@ -1,6 +1,6 @@
 ---
 - name: ensure zsh directory
   file:
-    path: "{{ oh_my_zsh_zsh_directory }}"
+    path: "{{ oh_my_zsh_zsh_dir }}"
     state: "directory"
   become: true

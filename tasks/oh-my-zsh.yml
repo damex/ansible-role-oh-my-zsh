@@ -4,11 +4,11 @@
     - name: ensure oh-my-zsh repository is cloned
       git:
         repo: "{{ oh_my_zsh_repository }}"
-        dest: "{{ oh_my_zsh_directory }}"
+        dest: "{{ oh_my_zsh_dir }}"
         update: false
     - name: ensure oh-my-zsh repository is up to date
       git:
         repo: "{{ oh_my_zsh_repository }}"
-        dest: "{{ oh_my_zsh_directory }}"
+        dest: "{{ oh_my_zsh_dir }}"
         clone: false
   become: true
