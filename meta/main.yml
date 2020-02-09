@@ -17,4 +17,5 @@ galaxy_info:
     - name: "Debian"
       versions:
         - "buster"
-dependencies: []
+dependencies:
+  - role: "damex.package"
