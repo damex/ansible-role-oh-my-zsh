@@ -8,3 +8,5 @@
         state: "{{ oh_my_zsh_git_package_state }}"
       - name: "{{ oh_my_zsh_zsh_package_name }}"
         state: "{{ oh_my_zsh_zsh_package_state }}"
+      - name: "{{ oh_my_zsh_ca_certificates_package_name }}"
+        state: "{{ oh_my_zsh_ca_certificates_package_state }}"
