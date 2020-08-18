@@ -36,11 +36,13 @@
         dest: "/etc/zshenv"
         force: true
         state: "link"
+        mode: "0644"
     - name: ensure zshrc symlink
       file:
         src: "{{ oh_my_zsh_zshrc_conf_file }}"
         dest: "/etc/zshrc"
         force: true
         state: "link"
+        mode: "0644"
   become: true
   when: ansible_distribution == 'CentOS'
