@@ -1,8 +1,8 @@
 # ansible oh-my-zsh role
 
-[![Build Status](https://travis-ci.com/damex/ansible-role-oh-my-zsh.svg?branch=master)](https://travis-ci.com/damex/ansible-role-oh-my-zsh)
+[![linting](https://github.com/damex/ansible-role-oh-my-zsh/workflows/linting/badge.svg)](https://github.com/damex/ansible-role-oh-my-zsh/actions)
 
-The oh-my-zsh role is designed to be used with Debian and CentOS distributives.
+The oh-my-zsh role is designed to be used with `Debian Buster` and `CentOS 7` distributives.
 
 `Ansible Galaxy` users can add oh-my-zsh role using the following command:
 
