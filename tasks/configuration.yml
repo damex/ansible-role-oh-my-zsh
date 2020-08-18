@@ -5,22 +5,27 @@
       template:
         src: "zshenv.j2"
         dest: "{{ oh_my_zsh_zshenv_conf_file }}"
+        mode: "0644"
     - name: ensure zshrc
       template:
         src: "zshrc.j2"
         dest: "{{ oh_my_zsh_zshrc_conf_file }}"
+        mode: "0644"
     - name: ensure zlogin
       template:
         src: "zlogin.j2"
         dest: "{{ oh_my_zsh_zlogin_conf_file }}"
+        mode: "0644"
     - name: ensure zlogout
       template:
         src: "zlogout.j2"
         dest: "{{ oh_my_zsh_zlogout_conf_file }}"
+        mode: "0644"
     - name: ensure zprofile
       template:
         src: "zprofile.j2"
         dest: "{{ oh_my_zsh_zprofile_conf_file }}"
+        mode: "0644"
   become: true
 
 - name: ensure centos specific zsh configuration
